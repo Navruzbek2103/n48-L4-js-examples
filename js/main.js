@@ -1,19 +1,109 @@
 // 1-masala.
-// var number = prompt("Ixtiyoriy raqam kiriting")
+// Foydalanuvchidan yoshni so'raydigan dastur tuzing. Yosh 50 dan katta bo'lsa, 'siz kattasiz' deb chiqarib bersin. 50 dan past bo'lsa, 'siz yoshsiz' deb chiqarsin
+var number = prompt("Yoshingizni kiriting")
 
-// if(number > 50){
-//   alert("Siz kottasiz");
-// }else if(number == 50){
-//   alert("Yoshingiz 50 ga teng");
-// }
-// else{
-//   alert("Siz kichginasiz")
-// }
+if(number > 50){
+  alert("Sizning yoshingiz katta ekan");
+}else if(number == 50){
+  alert("Yoshingiz 50 ga teng");
+}
+else{
+  alert("Siz yosh ekansiz")
+}
 
 
 
-// **************************************
 
+// __________________________________________________________
+
+
+
+
+
+// 2-masala.
+// Somsaning narxini so'raydigan dastur tuzing. Narx 3000 ming so'mdan katta bo'lsa, 'somsa qimmat' deb chiqarib bersin. 3000 ming so'mdan kichgina bo'lsa, 'somsa arzon' deb chiqarib bersin.
+
+var somsaPrice = prompt("Go'shtli somsa qancha aka?")
+if(somsaPrice > 3000){
+  alert("Qimmat ekan")
+}
+else{
+  alert("Somsa arzon ekan")
+}
+
+
+
+// __________________________________________________________
+
+
+
+
+// 3-4-masala.
+// Parolni tekshiradigan dastur. Foydalanuvchi 'sarimsoqpiyoz' parolini kiritgan bo'lsa, u bilan salomlashing. Boshqa narsa kiritgan bo'lsa, unga 'xato' deb yozing
+
+var inputUserName = prompt("Ismingizni kiriting: ")
+var password = prompt("Parolni kiriting: (sarimsoqpiyoz)");
+if(password == "sarimsoqpiyoz"){
+  alert("Assalomu alaykum " + inputUserName)
+}
+else{
+  alert("Parol noto'g'ri kiritildi!")
+}
+
+
+
+// __________________________________________________________
+
+
+
+// 5-masala.
+// Foydalanuvchi yoshini kiritishi kerak. Yoshi 0 dan 30 gacha bo'lsa, unga 'yosh ekansiz' deb chiqaring. Yoshi 30 dan 60 gacha bo'lsa, 'siz navqironsiz' deb chiqaring. Yoshi 60 dan yuqori bo'lsa, 'Yoshingiz katta ekan' deb chiqaring.
+var inputUserAge = prompt("Yoshingizni kiriting: (Avvalgi masala emas.)")
+if(inputUserAge.length != 0){
+  if(inputUserAge > 0 && inputUserAge <= 30){
+    alert("Yosh ekansiz")
+  }
+  else if(inputUserAge > 30 && inputUserAge <= 60){
+    alert("Siz navqironsiz");
+  }
+  else if(inputUserAge > 60){
+    alert("Yoshingiz ancha katta ekan");
+  }
+  else{
+    alert("Noto'g'ri qiymat kiritildi")
+  }
+}
+else{
+  alert("Iltimos, so'rovnomani to'ldiring...")
+}
+
+
+// __________________________________________________________
+
+
+
+// 6-masala.
+// Foydalanuvchidan ismini so'rang. Agar ismi "Ali" bo'lsa, unga "Salom og'a" deb javob yozing. Ismi "Ahmad" bo'lsa, unga "Ko'rinmayapsan do'stim, nima qilayapsan?" deb yozing.
+var userNameInput = prompt("Assalomu alaykum, ismingizni kiriting: (Ali, Ahmad)")
+if(userNameInput.length != 0){
+  if(userNameInput == "Ali"){
+    alert("Salom og'a")
+  }
+  else if(userNameInput = "Ahmad"){
+    alert("Ko'rinmayapsan do'stim, nima qilayapsan?")
+  }
+  else{
+    alert("Assalomu alaykum " + userNameInput)
+  }
+}
+else{
+  alert("Iltimos, so'rovnomani to'ldiring!")
+}
+
+
+// __________________________________________________________
+
+// Darsda ishlangan masala.
 var elUserName = document.querySelector(".user-name");
 var elUserMoney = document.querySelector(".user-money");
 var elAllCost = document.querySelector(".all-cost");
